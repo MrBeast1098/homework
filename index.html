@@ -5,40 +5,19 @@
       body {
         background-color: #F0F0F0;
         font-family: Arial, sans-serif;
-      }
-      
-      .container {
-        max-width: 800px;
-        margin: 50px auto;
-        background-color: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
       
       h1 {
-        text-align: center;
         margin-bottom: 30px;
         color: cornflowerblue;
       }
       
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 30px;
-      }
-      
-      input[type="text"] {
-        padding: 10px;
-        font-size: 18px;
-        width: 70%;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: 1px solid lightgray;
-      }
-      
-      input[type="submit"] {
+      button {
         padding: 10px 20px;
         background-color: cornflowerblue;
         color: white;
@@ -47,37 +26,19 @@
         font-size: 18px;
         cursor: pointer;
       }
-      
-      .results {
-        background-color: lightgray;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: 20px;
-        text-align: center;
-        color: white;
-        font-size: 18px;
-      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Chat GPT API</h1>
-      <form id="form">
-        <input type="text" placeholder="Enter your question">
-        <input type="submit" value="Submit">
-      </form>
-      <div class="results">
-        Results will appear here...
-      </div>
-    </div>
+    <h1>Welcome</h1>
+    <button id="chat-gpt-button">Chat GPT</button>
     
     <script>
-      const form = document.getElementById("form");
+      const chatGptButton = document.getElementById("chat-gpt-button");
       
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
+      chatGptButton.addEventListener("click", () => {
         window.location.href = "/gpt/gpt.html";
       });
     </script>
   </body>
 </html>
+
